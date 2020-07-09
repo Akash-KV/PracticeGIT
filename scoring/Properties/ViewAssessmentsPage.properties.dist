@@ -1,0 +1,2 @@
+VIEWASSESSMENTS_CREATEBUTTON=//a[@id='new-btn-dropdown']
+VIEWASSESSMENTS_CREATEBUTTONDROPDOWNASSESSMENTVIEW=//a[contains(text(),'Assessment View')]
