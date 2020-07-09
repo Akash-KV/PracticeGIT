@@ -1,0 +1,316 @@
+public void e_SelectFewAssessmentsAndClickFunctionDropDown(){
+        /*Wait until Assessments in data table is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getAssessmentsList());
+
+        List<WebElement> assessments = BrowserInitHelper.getInstance().findElements(By.xpath(viewAssessmentsPage.getAssessmentsList()));
+
+        viewAssessmentsController.selectFewAssessments(2, assessments);
+
+        /*Scroll till function drop down in the End of Page*/
+        JavascriptHelper.ScrollTillElement_Javascript(viewAssessmentsPage.getFunctionDropDown());
+
+        /*Click function drop down*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getFunctionDropDown());
+
+        /*Select Edit Option*/
+        WebElement dropDown = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getFunctionDropDown()));
+        Select selectOption = new Select(dropDown);
+        selectOption.selectByVisibleText("Edit");
+
+        /*Click Submit button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getSubmitButton());
+    }
+
+    public void v_VerifyEditAssessmentModal(){
+        /*Validate the existence of Edit Assessment Modal*/
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getEditAssessmentModal()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_ClickShareOption(){
+        /*Click Edit Assessment Close icon*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getCloseEditAssessmentModalIcon());
+
+        /*Select Share Option*/
+        WebElement dropDown = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getFunctionDropDown()));
+        Select selectOption = new Select(dropDown);
+        selectOption.selectByVisibleText("Share");
+
+        /*Click Submit button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getSubmitButton());
+    }
+
+    public void v_VerifyAssessmentShareModal(){
+        /*Wait until Assessments in data table is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getEditAssessmentModal());
+
+        /*Validate the existence of Share Assessement modal*/
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getEditAssessmentModal()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_ClickUnshareOption(){
+        /*Click Share Assessment Close icon*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getCloseEditAssessmentModalIcon());
+
+        /*Select Unshare Option*/
+        WebElement dropDown = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getFunctionDropDown()));
+        Select selectOption = new Select(dropDown);
+        selectOption.selectByVisibleText("Unshare");
+
+        /*Click Submit button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getSubmitButton());
+    }
+
+    public void v_VerifyAssessmentUnshareModal(){
+        /*Wait until Assessments in data table is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getNevermindButton());
+
+        /*Validate the existence of Unshare Assessement modal*/
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getNevermindButton()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_ClickDeleteOption(){
+        /*Click Nevermind button in Assessment Unshare modal*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getNevermindButton());
+
+        /*Click Assessments icon in Navigation sidebar*/
+        DriverHelper.clickXpath(dashboardPOM.getAssessmentsIcon());
+
+        /*Click View Assessments Link*/
+        DriverHelper.clickXpath(dashboardPOM.getViewAssessmentsLink());
+
+        /*Wait until View Assessments header appears*/
+        BrowserInitHelper.waitUntil(dashboardPOM.getViewAssessmentsHeader());
+
+        /*Click Created By Me link*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getCreatedByMe());
+
+        /*Click Add Filter button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getAddFilters());
+
+        /*Click Type filter*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeFilter());
+
+        /*Enter Item Bank in Type Filter*/
+        DriverHelper.sendKeysXpath(viewAssessments_AddFilters.getTypeFilter(), "Item Bank", BrowserInitHelper.getWaiter(), BrowserInitHelper.getInstance());
+
+        /*Select Item Bank option*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeOption("Item Bank"));
+
+        /*Click Search button*/
+        JavascriptHelper.clickID_JS(viewAssessments_AddFilters.getSearchButton_AddFilters());
+
+        /*Wait until Assessments in data table is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getAssessmentsList());
+
+        List<WebElement> assessments = BrowserInitHelper.getInstance().findElements(By.xpath(viewAssessmentsPage.getAssessmentsList()));
+
+        viewAssessmentsController.selectFewAssessments(2, assessments);
+
+        /*Scroll till function drop down in the End of Page*/
+        JavascriptHelper.ScrollTillElement_Javascript(viewAssessmentsPage.getFunctionDropDown());
+
+        /*Select Unshare Option*/
+        WebElement dropDown = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getFunctionDropDown()));
+        Select selectOption = new Select(dropDown);
+        selectOption.selectByVisibleText("Delete");
+
+        /*Click Submit button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getSubmitButton());
+    }
+
+    public void v_VerifyBulkAssessmentDeleteModal(){
+        /*Validate the existence of Assessment Delete alert*/
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getDeleteAlertMessage()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void v_VerifyBulkAssessmentDelete(){
+        /*Validate the existence of Assessment Delete alert*/
+        //WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getDeleteAlertMessage()));
+        //Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_ClickChangeAuthorOption(){
+        /*Click Nevermind button in Assessment Unshare modal*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getNevermindButton());
+
+        /*Click Assessments icon in Navigation sidebar*/
+        DriverHelper.clickXpath(dashboardPOM.getAssessmentsIcon());
+
+        /*Click View Assessments Link*/
+        DriverHelper.clickXpath(dashboardPOM.getViewAssessmentsLink());
+
+        /*Wait until View Assessments header appears*/
+        BrowserInitHelper.waitUntil(dashboardPOM.getViewAssessmentsHeader());
+
+        /*Click Created By Me link*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getCreatedByMe());
+
+        /*Click Add Filter button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getAddFilters());
+
+        /*Click Type filter*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeFilter());
+
+        /*Enter Item Bank in Type Filter*/
+        DriverHelper.sendKeysXpath(viewAssessments_AddFilters.getTypeFilter(), "Item Bank", BrowserInitHelper.getWaiter(), BrowserInitHelper.getInstance());
+
+        /*Select Item Bank option*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeOption("Item Bank"));
+
+        /*Click Search button*/
+        JavascriptHelper.clickID_JS(viewAssessments_AddFilters.getSearchButton_AddFilters());
+
+        /*Wait until Assessments in data table is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getAssessmentsList());
+
+        List<WebElement> assessments = BrowserInitHelper.getInstance().findElements(By.xpath(viewAssessmentsPage.getAssessmentsList()));
+
+        viewAssessmentsController.selectFewAssessments(2, assessments);
+
+        /*Scroll till function drop down in the End of Page*/
+        JavascriptHelper.ScrollTillElement_Javascript(viewAssessmentsPage.getFunctionDropDown());
+
+        /*Select Unshare Option*/
+        WebElement dropDown = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getFunctionDropDown()));
+        Select selectOption = new Select(dropDown);
+        selectOption.selectByVisibleText("Change Author");
+
+        /*Click Submit button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getSubmitButton());
+    }
+
+    public void v_VerifyChangeAuthorModal(){
+        /*Wait until Link Assessments modal is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getNevermindButton());
+
+        /*Validate the existence of Assessement Change Author modal*/
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getNevermindButton()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_ClickLinkAssessmentOption(){
+        /*Click Nevermind button in Assessment Unshare modal*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getNevermindButton());
+
+        /*Click Assessments icon in Navigation sidebar*/
+        DriverHelper.clickXpath(dashboardPOM.getAssessmentsIcon());
+
+        /*Click View Assessments Link*/
+        DriverHelper.clickXpath(dashboardPOM.getViewAssessmentsLink());
+
+        /*Wait until View Assessments header appears*/
+        BrowserInitHelper.waitUntil(dashboardPOM.getViewAssessmentsHeader());
+
+        /*Click Created By Me link*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getCreatedByMe());
+
+        /*Click Add Filter button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getAddFilters());
+
+        /*Click Type filter*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeFilter());
+
+        /*Enter Item Bank in Type Filter*/
+        DriverHelper.sendKeysXpath(viewAssessments_AddFilters.getTypeFilter(), "Item Bank", BrowserInitHelper.getWaiter(), BrowserInitHelper.getInstance());
+
+        /*Select Item Bank option*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeOption("Item Bank"));
+
+        /*Click Search button*/
+        JavascriptHelper.clickID_JS(viewAssessments_AddFilters.getSearchButton_AddFilters());
+
+        /*Wait until Assessments in data table is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getAssessmentsList());
+
+        List<WebElement> assessments = BrowserInitHelper.getInstance().findElements(By.xpath(viewAssessmentsPage.getAssessmentsList()));
+
+        viewAssessmentsController.selectFewAssessments(2, assessments);
+
+        /*Scroll till function drop down in the End of Page*/
+        JavascriptHelper.ScrollTillElement_Javascript(viewAssessmentsPage.getFunctionDropDown());
+
+        /*Select Unshare Option*/
+        WebElement dropDown = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getFunctionDropDown()));
+        Select selectOption = new Select(dropDown);
+        selectOption.selectByVisibleText("Link to Assessment View(s)");
+
+        /*Click Submit button*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getSubmitButton());
+    }
+
+    public void v_VerifyLinkAssessmentModal(){
+        /*Wait until Link Assessments modal is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getEditAssessmentModal());
+
+        /*Validate the existence of Link Assessments modal */
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getEditAssessmentModal()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_SelectAssessmentTypeAndSearch(){
+        /*Click Type filter*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeFilter());
+
+        /*Enter Item Bank in Type Filter*/
+        DriverHelper.sendKeysXpath(viewAssessments_AddFilters.getTypeFilter(), "Assessment", BrowserInitHelper.getWaiter(), BrowserInitHelper.getInstance());
+
+        /*Select Item Bank option*/
+        DriverHelper.clickXpath(viewAssessments_AddFilters.getTypeOption("Assessment"));
+
+        /*Click Search button*/
+        JavascriptHelper.clickID_JS(viewAssessments_AddFilters.getSearchButton_AddFilters());
+    }
+
+    public void e_ClickUnpublishedItemBank(){
+        /*Click Unpublished Item Bank link*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getUnpublishedItemBankLink());
+    }
+
+    public void v_VerifyUnpublishedItemBankHeader(){
+        /*Wait until Unpublished Item Bank header is visible*/
+        BrowserInitHelper.waitUntil(viewAssessmentsPage.getUnpublishedItemBankHeader());
+
+        /*Validate the existence of Assessement Change Author modal*/
+        WebElement Element = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getUnpublishedItemBankHeader()));
+        Assert.assertTrue(DriverHelper.elementExistence(Element, BrowserInitHelper.getInstance()));
+    }
+
+    public void e_ClickActionDropDown(){
+        /*Click Action drop down*/
+        DriverHelper.clickXpath(viewAssessmentsPage.getActionDropDown());
+    }
+
+    public void v_VerifyActionDropDownOptions(){
+        boolean isExist = false;
+        List<String> options = new ArrayList<String>();
+        options.add("Edit");
+        options.add("Delete");
+
+        WebElement optionElements = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getActionDropDownOptions()));
+
+        for(int i=0;i<options.size(); i++){
+            if(optionElements.getText().equalsIgnoreCase(options.get(i))){
+                isExist = true;
+            }
+            else{
+                isExist = false;
+                break;
+            }
+        }
+    }
+
+    public void e_ClickActionDropDownAndSelectEditOption(){
+
+    }
+
+    public void v_VerifyItemBankAssessmentCreationWizard(){
+
+    }
+
+    public void e_ClickReturnToIlluminate(){
+
+    }

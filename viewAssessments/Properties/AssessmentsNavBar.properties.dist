@@ -1,0 +1,5 @@
+#AssessmentsNavBar
+VIEW_ASSESSMENTS= //a[contains(text(),'View Assessments')]
+ASSESSMENT_VIEW= //div[@class='navigation-group']//li[6]
+ITEMBANK_ASSESSMENT= //a[contains(text(),'Create Itembank Assessment')]
+CLICK_ASSESSMENT= //div[@id='navigation-sidebar-content-menu-container']/ul/li[1]

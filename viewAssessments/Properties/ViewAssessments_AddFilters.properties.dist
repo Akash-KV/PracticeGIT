@@ -1,0 +1,26 @@
+#ViewAssessments_AddFilters
+FILTERED_VALUE= //div[@id='select2-drop']//ul//li/div[.='"+Value+"']
+ADD_FILTER_POPUP=//div[@id='list-assessment-filters-modal']
+AUTHOR_LABEL=//div[@id='author_div']//label[@for='author']
+FILTER_VALUE_LIST=//div[@id='select2-drop']//ul//li/div
+#ID
+SEARCHBUTTON_ADDFILTER=search-btn
+SEARCH_BUTTON_ADD_FILTER=//input[@id='search-btn']
+AUTHOR_FILTER=//div[@id='s2id_author']//ul[@class='select2-choices']/li/input
+TYPE_FILTER=//div[@id='s2id_type']//input
+TYPE_OPTION= //div[contains(@id,'drop')]//span[text() = '"+option+"']
+YEAR_FILTER=//div[@id='s2id_year']//input
+GRADE_FILTER=//div[@id='s2id_grade']//input
+SCOPE_FILTER=//div[@id='s2id_sub_type']//input
+SUBJECT_FILTER=//div[@id='s2id_subject']//input
+CLOSE_FOR_SELECTED_OPTION=//a[@class='select2-search-choice-close']
+#ID
+RESETBUTTON_ADDFILTER= reset-btn
+DATE_CREATED_START=//input[@id='date_created_start']
+DATE_CREATED_END=//input[@id='date_created_end']
+CLOSE_BUTTON=//div[@id='list-assessment-filters-modal']//button[@class='close']
+TYPE_LABEL=//div[@id='filter-form-fields']//label[@for='type']
+YEAR_LABEL=//div[@id='filter-form-fields']//label[@for='year']
+GRADE_LABEL=//div[@id='filter-form-fields']//label[@for='grade']
+SCOPE_LABEL=//div[@id='filter-form-fields']//label[@for='sub_type']
+SUBJECT_LABEL=//div[@id='filter-form-fields']//label[@for='subject']

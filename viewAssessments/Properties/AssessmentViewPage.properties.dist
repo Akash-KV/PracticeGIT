@@ -1,0 +1,45 @@
+#AssessmentViewPage
+TITLE_INPUT_FIELD=//input[@id='title']
+DESCRIPTION_INPUT_FIELD=//textarea[@id='description']
+CHOOSE_ASSESSMENTS_BUTTON=//a[@id='add_assessment']
+SAVE_BUTTON=//input[@id='save']
+
+#controllers
+ONLY_SHOW_ASSESSMENT_WITH_DATA_TOGGLE_INPUT=//*[@id="only_with_data"]
+ONLY_SHOW_ASSESSMENT_WITH_DATA_TOGGLE_LABLE=//label[@for='only_with_data']
+CREATE_BUTTON=//a[@class='btn btn-large btn-default dropdown-toggle']
+DROPDOWN_MENU=//ul[@class='dropdown-menu']/li
+FILTER_MODEL=//*[@id="list-assessment-filters"]/div/span[contains(text(), 'Add')]
+RESET_BUTTON=//input[@id='reset-btn']
+NUMBER_OF_ASSESSMENTS=//ul[@class='dropdown-menu']/li
+ASSESSMENT_TYPE=//input[@id='s2id_autogen1']
+ASSESSMENT_TYPE_CLICK=//div[starts-with(@id,'select2-')]//ul[1]/li[1]/div[1]
+SEARCH=//div[@class='modal-body']//div//input[@value='Search']
+ASC_DATA_COLUMN=//th[@class='has_responses sorting_desc']
+ASC_DATA_COLUMN_CLICK=//table[1]/thead[1]/tr[1]/th[8]
+DES_DATA_COLUMN=//th[@class='has_responses sorting_asc']
+DES_DATA_COLUMN_CLICK=/table[1]/thead[1]/tr[1]/th[8]
+FIRST_ROW=//table[1]/tbody[1]/tr[1]/td[2]/a
+FIRST_ROW_CLICK=//table[1]/tbody[1]/tr[1]/td[2]/a[1]
+VISIBALITY_OF_ALL_ELEMENTS_LOCATED=//table[1]/tbody[1]/tr[1]/td[2]/a
+NEXT_PAGE_NUMBER_OF_ELEMENTS=//div[@class='dataTables_paginate paging_bootstrap pagination']/ul[1]/li
+NEXT_PAGE_CURRENT_PAGE=//div[@class='dataTables_paginate paging_bootstrap pagination']/ul[1]/li[@class='active']
+FLEXIBLE_ELEMENT=//table[starts-with(@id,'assessment_list_data_table_')]//tr
+
+#ListAssessmentsController
+LIST_ASSESSMENTS_NAVIGATION_SIDEBAR=//div[@id='navigation-sidebar-content-menu-container']/ul/li[1]
+LIST_VIEW_ASSESSMENTS_CLICK=//a[contains(text(),'View Assessments')]
+
+#PermissionController
+SCOPE_SELECTOR=//*[@id="scopeSelector"]/div[5]/div[1]/h4/a
+USER_BUTTON=//*[@id="user_button"]
+USER_GRANTEE="//*[@id=\"s2id_user_grantee_id\"]
+ADMIN_PERMISSION_HEADER=//*[@id="ied-admin-permissions-header"]/h3
+T_BODY=//tbody/tr
+SAVE=//*[@id="save"]
+#Testclass
+ITEMBANK_WITHOUT_DATA_ELEMENT_LOCATED=//p[contains(text(),"Hello there. We noticed you don't have any student")]
+ITEMBANK_WITH_DATA_ELEMENT_LOCATED=//tr[1]//td[8]//a[1]//span[@class='badge badge-success']
+ITEMBANK_WITH_DATA_STUDENT_RESPONSE=//a[@title='Go to Student Responses']
+FLEXIBLE_WITH_DATA_ELEMENT_LOCATED=//*[starts-with(@id,'highcharts')])[1]
+FLEXIBLE_WITHOUT_DATA_TITLE=//div[@class='title']

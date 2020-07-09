@@ -1,0 +1,1 @@
+BEGIN_TEST_BUTTON= //a[contains(text(), 'Test')]

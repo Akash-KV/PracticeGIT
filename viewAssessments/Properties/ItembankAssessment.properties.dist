@@ -1,0 +1,28 @@
+#ItembankAssessment
+QUICK_MODE=//div[@class='modal-body']//input[@value='assessment-quick']
+NEXT_BUTTON=//button[@class='btn btn-primary']
+TITLE_INPUT=title
+CREATE_BUTTON=//*[@id="saveNewQuickAssessment"]
+STANDARD_DOCUMENT=//select[@id='standard_document']
+STANDARDS=Common Core State Standards
+STANDARD_SUBJECT=//*[@id="standard_subject"]
+SUBJECT=English Language Arts/Literacy (2010)
+STANDARD_CATEGORY=//select[@id='standard_category']
+CATEGORY=Grade 1
+STANDARD_ITEMS=/html[1]/body[1]/div[7]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[3]/div[2]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/label[2]/span[2]
+VERIFY_STANDARDS=//span[@class='list-box']//span[@class='detail_count'][contains(text(),'1')]
+CONTINUE_BUTTON=//span[contains(text(),'Next')]
+ADD=/html[1]/body[1]/div[7]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/a[1]
+ASSESSMENT_TITLE=//div[@class='assessment-title']
+GENERATE_QUESTIONS=//a[@class='btn btn-success btn-large btn-generate-all-init']
+VERIFY_QUESTIONS=/html[1]/body[1]/div[7]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[1]/div[2]/div[2]/div[2]
+READY_TO_PUBLISH=/html[1]/body[1]/div[7]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/fieldset[1]/legend[1]/a[1]
+PUBLISH_ADMINISTER=//button[@class='btn btn-default publish_admin_button']
+#ID
+TITLE_INPUT= title
+#ID
+STANDARDS= Common Core State Standards
+#ID
+SUBJECT= English Language Arts/Literacy (2010)
+#ID
+CATEGORY= Grade 1

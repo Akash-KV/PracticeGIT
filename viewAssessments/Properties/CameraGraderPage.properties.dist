@@ -1,0 +1,2 @@
+CAMERA_CANVAS= //canvas[@id='lgcg-canvas']
+CAMERA_ITEMBANK=//h1[@id='duplicate_assessment_title']

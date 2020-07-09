@@ -1,0 +1,197 @@
+#ViewAssessmentsPage
+CREATE_BUTTON=//a[@id='new-btn-dropdown']
+CREATE_BUTTON_DROPDOWN_ASSESSMENTS_VIEW=//a[contains(text(),'Assessment View')]
+CREATED_BY_ME= //a[contains(text(), 'Created By Me')]
+ADD_FILTERS=//span[@class='chip-label']
+SEARCH_ASSESSMENTSBAR=//input[@id='search_string']
+SHOW_ASSESSMENTS_WITHOUT_DATATOGGLE_BUTTON=only_with_data
+SEARCH_TEXT_BOX=search_string
+SEARCH_TEXT_BOX_BUTTON=direct_search
+LOADER=//div[@class='loading-overlay']//div[.='Loading']
+PAGING_INFO=//div[@id='assessment-information']//span[@class='paging-info']
+FIRST_ROW_TYPE_COLUMN=//table[starts-with(@id,'assessment_list_data_table')]//tbody//tr[1]//td[3]/small
+FIRST_ROW_TYPE_FOR_FLEXIBLE=//table[starts-with(@id,'assessment_list_data_table')]//tbody//tr[1]//td[3]/span
+UNPUBLISHED_ITEM_BANK=//a[.=' Draft Item Bank']
+UNPUBLISHED_ITEM_BANK_PAGE_HEADER=//span[contains(text(),'Draft Item Bank ')]
+NO_DATA_AVAILABLE_IN_TABLE=//table[starts-with(@id,'assessment_list_data_table')]//tbody//tr[1]//td
+POPUP=//button[starts-with(@id,'pendo-close-guide-')]
+VIEW_ASSESSMENTS_HEADER=//div[@id='flex-sub-left-container']/span[.='View Assessments']
+VIEW_ASSESSEMENTS_FILTER=//div[@id='search-groups-div']
+CANCEL_ADD_FILTER=//button[@aria-label='Close']
+FILTER_BUTTON_AFTER_SEARCH=//span[.='+ Add/Edit Filters']
+FIRST_LINK_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[2]/a
+FIRST_LINK_OWNER_NAME_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[5]
+FIRST_LINK_TYPE_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[3]
+DATA_TABLE_EMPTY=//td[@class='dataTables_empty']
+DATE_CREATED_MSG=//span[@id='date_created_msg']
+DATE_CREATED=//table//th[.='Date Created']
+FIRST_LINK_DATE_CREATED_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[6]
+ADD_FILTER_AFTER_RESET=//span[.='+ Add Filters']
+SEARCH_BUTTON_IN_VIEW_ASSESSMENTS=//input[@id='direct_search']
+CLEAR_ALL_IN_VIEW_ASSESSMENTS=//span[@id='clear-all-filter']/a[.='Clear All']
+ALL_ASSESSMENTS_LINK=//a[contains(text(),'All Assessments')]
+ALL_ASSESSMENT_LINK=//a[.=' All Assessments']
+MY_ASSESSMENTS_LINK=//a[contains(text(),'My Assessments')]
+CREATED_BY_ME_LINK=//a[contains(text(),'Created By Me')]
+FAVORITES_LINK=//a[contains(text(),'Favorites')]
+UNPUBLISHED_ITEMBANK_LINK=//a[contains(text(),' Draft Item Bank')]
+SHOW_DROPDOWN=//select[starts-with(@name,'assessment_list_data_table')]
+
+SHARED_WITH_ME_LINK=//a[contains(text(),'Shared with Me')]  
+TRASH_LINK=//a[contains(text(),'Trash')]
+LOADER=//div[@class='loading-overlay']//div[.='Loading']
+PAGING_INFO=//div[@id='assessment-information']//span[@class='paging-info']
+SHARED_WITH_ME_TITLE=//div[@id='assessment-information']/span[@class='selected-search-group']
+FIRST_LINK_SHARE_ICON_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[2]/i[@title='Click to View Permission List']
+CURRENT_PERMISSION_MODEL_TITLE=//h3[.='Current Permission']
+CURRENT_PERMISSION_MODEL_CLOSE_BUTTON=(//div[@class='modal-footer']//button[.='Close'])[1]
+ACTION_BUTTON_FOR_THE_FIRST_LINK=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]//a[@class='action-btn btn dropdown-toggle']
+SHARE_OPTION_IN_ACTION_BUTTON_FOR_THE_FIRST_LINK=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]//a[@class='action-btn btn dropdown-toggle']//following::a[.='Share'][1]
+CURRENT_PERMISSION_MODEL_TITLE2=//h2[.='Current Permissions']
+SHARE_SUCCESS_MESSAGE=//div[@class='alert alert-success']
+CONTROL_PANEL_SETTING_OPTION=//li[@data-prefix='control-panel']/div
+CONTROL_PANEL_SITE_DROPDOWN_SEARCHBOX=//div[@id='select2-drop']//input[starts-with(@id,'s2id_autogen')]
+SITE_HEADER=//div[@id='navigation-header-content']/h1
+TYPE_COLUMN=//table[starts-with(@id,'assessment_list_data_table')]//td[3]
+SHARE_ICON=(//table[starts-with(@id,'assessment_list_data_table')]//td[3]/preceding::td[1]/i)[" + i + "]
+
+CREATED_BY_ME_HEADER= //span[contains(text(), 'Created By Me')]
+ADD_FILTERS= //span[@id = 'list-assessment-filters']//span[contains(text(),'Add Filters')]
+ADD_EDIT_FILTERS=//span[@id = 'list-assessment-filters']//span[contains(text(),'+ Add/Edit Filters')]
+ASSESSMENT_DATA_TABLE=//table[@class='table table-striped table-condensed table-bordered dataTable']
+ACTION_DROPDOWN= //tr[1]//td[9]//div[1]//a[1]//span[1]
+ASSESSMENT_ACTION_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Assessment']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+FLEXIBLE_ACTON_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//span[text()='Flexible']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+FLUENCE_ACTION_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Fluence']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+SURVEY_ACTION_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Survey']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+DEMOGRAPHICS_ACTION_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Demographic']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+SUMMARY_ACTION_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Summary')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+ASSESSMENT_VIEW_ACTION_DROPDOWN= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'View')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+SKILLS_ASSESSEMENT_ACTION_DROPDOWN_OPTION= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Skills')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+PTF_ASSESSMENT_DROPDOWN_OPTIONS= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Physical')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+PFT_ASSESSMENT_DROPDOWN_OPTION= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Physical')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]
+ACTION_DROPDOWN_OPTION= //table[@id = 'assessment_list_data_table']//tbody/tr[1]/td//a[contains(text(), 'Action')]/following-sibling::ul//a[contains(text(), '"+option+"')]
+ASSESSMENT_ACTION_DROPDOWN_OPTION= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Assessment']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+FLEXIBLE_ACTON_DROPDOWN_OPTION= (//table[@id = 'assessment_list_data_table']//tbody/tr//span[text()='Flexible']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+FLUENCE_ACTION_DROPDOWN_OPTIONS=(//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Fluence']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+SURVEY_ACTION_DROPDOWN_OPTIONS= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Survey']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+DEMOGRAPHICS_ACTION_DROPDOWN_OPTIONS= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Demographic']/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+SUMMARY_ACTION_DROPDOWN_OPTIONS= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Summary')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+ASSESSMENT_VIEW_ACTION_DROPDOWN_OPTIONS= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'View')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+SKILLS_ASSESSEMENT_ACTION_DROPDOWN_OPTIONS= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Skills')]/parent::td/following-sibling::td//a[contains(text(), 'Action')])[1]/following-sibling::ul//a[contains(text(), '"+option+"')]
+ONLINE_ASSESSMENT_PREVIEW_HEADER=//h3[text() = 'Online Assessment Preview - Administration Options']
+PREVIEW_BUTTON= //input[@id='preview-test']
+HAS_STUDENT_RESPONSE=//table[@class='table table-striped table-condensed table-bordered dataTable']
+
+SHOW_ASSESSMENT_WITHOUT_DATA_TOGGLE_BUTTON= only_with_data
+DELETE_ALERT_MESSAGE= //div[@class='illuminate_alert_container']
+DELETE_ASSESSMENT_BUTTON= //input[@id='submit-btn']
+DELETE_UNDERSTAND_CHECKBOX= //input[@id='understand']
+GET_DELETE_AGREE_CHECKBOX= //input[@id='agree']
+ALERT_SUCCESS= //div[@class='alert alert-success']
+ASSESSMENTS_LIST= //table[@id='assessment_list_data_table']//tbody/tr//input[@type='checkbox']
+FUNCTION_DROPDOWN= //select[@id='update[action]']
+SUBMIT_BUTTON= //button[@id='update-assessment-btn']
+EDIT_ASSESSMENT_MODEL= //div[@id='update-assessment-modal']
+CLOSE_EDIT_ASSESSMENT_MODEL_ICON= //div[@id='update-assessment-modal']//button[@class = 'close']
+ALERT_CONTAINER= //div[@class = 'illuminate_alert_container']
+NEVER_MIND_BUTTON= //a[contains(text(), 'Nevermind, get me out of here')]
+UNPUBLISHED_ITEMBANK_LINK= //a[contains(text(),'Unpublished Item Bank')]
+UNPUBLISHED_ITEMBANK_HEADER= //a[contains(text(),'Draft Item Bank')]
+
+RETURN_TO_ILLUMINATE_ICON= //span[contains(text(), 'Return to Illuminate')]
+PTF_STUDENT_RESPONSE_HEADER= //h3[contains(text(),'Physical Fitness Test')]
+VIEW_ASSESSMENTS_GREY_DATA_CIRCLE=//div[@class='assess-count']/div[.='0']
+MASS_DROPDOWN=//select[@id='update[action]']
+MASS_SUBMIT=//button[@id='update-assessment-btn']
+MASS_CHECKBOX=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Summary Assessment'])[1]/parent::td/ancestor::tr/child::td/input[@id='update[summary_assessment][]']
+PUBLISH_ITEMBANK=(//input[@class='published'])[2]
+ITEMBANK_DUPLICATE=//a[@class='align_right btn btn-primary btn-large duplicate']
+SKILLS_DUPLICATE=//legend
+ITEMBANK_DUPLICATE_DISSMISS=//parent::div[@class='modal-footer']/button[text()='Dismiss']
+ASSESSMENT_TITLE=Copy of manual-hybrid-test
+FLEXIBLE_TITLE=Rubric Test
+ITEMBANK_TITLE=Copy of CA legacy IB test
+SUMMARY_TITLE=Copy of test
+ASSESSMENT_VIEW_TITLE=test
+SUMMARY_COPY_TITEL=Copy of Copy of test
+
+
+SKILLS_ASSESSMENT_DUPLICATE_BUTTON= //input[@id='duplicate']
+ITEMBANK_ACTION_LIST=//div[@class='btn-group action-group open']/ul/li/a
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Item Bank'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+ITEMBANK_VIEW_RESULT_ACTION_DROPDOWN=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//span[text()='Item Bank (New)'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+SUMMARY_ACTON_DROPDOWN_OPTIONS_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Summary Assessment'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_SHARE=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Share']
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_ADMINISTER=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Administer']
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_PREVIEW=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Preview']
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_SCAN=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Scan']
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_VIEW_RESULT=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='View Results']
+STUDENT_RESPONSE_DROPDOWN=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Student Responses']
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_DUPLICATE=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Duplicate']
+DRAFT_ITEM_BANK_EDIT=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Edit']
+ITEMBANK_DUPLICATE_CLOSE=//div[@id='assessment_duplicate_modal']//button[@class='close'][contains(text(),'×')]
+ITEMBANK_ACTON_DROPDOWN_OPTIONS_DELETE=//div[@class='btn-group action-group open']//ul[@class='dropdown-menu pull-right']//li//a[.='Delete']
+
+ASSESSMENT_ACTON_DROPDOWN_OPTIONS_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Assessment'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+
+
+ASSESSMENT_ACTION_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Assessment'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span
+FLEXIBLE_ACTION_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Flexible'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+SUMMARY_ASSESSMENT_ACTION_DROPDOWN_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Summary Assessment'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span
+ASSESSMENT_VIEW_ACTON_DROPDOWN_OPTIONS_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Assessment View'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+SKILLS_ASSESSMENTS_ACTION_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Skills Assessment'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+PTF_ASSESSMENT_ACTION_LIST=(//table[contains(@id,'assessment_list_data_table_')]//tbody//tr//td//small[text()='Physical Fitness Test'])[1]/parent::td/following::td[6]//a[@class='action-btn btn dropdown-toggle']/span[@class='caret']
+
+ASSESSMENT_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Assessment'])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+FLEXIBLE_ACTON_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Flexible'])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+FLUENCE_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Fluence'])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+SURVEY_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Survey'])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+DEMOGRAPHICS_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[text()='Demographic'])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+SUMMARY_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Summary')])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+ASSESSMENT_VIEW_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'View')])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+SKILLS_ASSESSEMENT_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Skills')])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+PTF_ASSESSMENT_ACTION_DROPDOWN_OPTIONS_LIST= (//table[@id = 'assessment_list_data_table']//tbody/tr//small[contains(text(),'Physical')])[1]/parent::td/following-sibling::td//a[contains(text(), 'Action')]/following-sibling::ul//a
+
+#4/2/2020
+LEGACY_ITEMBANK_TITLE=//legend/span[@class='pageTitle' and contains(.,'Basic Information')]
+BUILD_PAGE_ITEM_CONTENT=//div[@class='ibx-app-content__content']
+FIRST_ROW_DELETE_LINK=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[9]/div/a[text()[normalize-space() = 'Action']]/parent::div//ul//a[.='Delete']
+FINAL_DELETE_ASSESSMENT_BUTTON=//input[@id='submit-btn' and @value='Delete Assessment']
+UNDO_LINK_AFTER_DELETE=//a[.='undo']
+UNDERSTAND_NO_UNDO=//input[@id='understand_no_undo']
+RESTORE_ASSESSMENT_BUTTON=//input[@id='submit-btn' and @value='Restore Assessment(s)']
+RESTORE_MESSAGE=//div[.='Selected assessments have been restored.']
+FIRST_ROW_INPUT=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[1]/input[@type='checkbox']
+SECOND_LINK_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[2]/td[2]/a
+FIRST_ID_AFTER_SEARCH=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[4]
+DRAFTITEMBANK_LINK=//a[text()[normalize-space() = 'Draft Item Bank']]
+CLICK_ON_RESTORE=//a[contains(text(),'Restore')]
+
+#4/2/2020
+CHECK_ASSESSMENT_WITH_DATA_TOGGLE=//div[@class='row-fluid']//input[@id='only_with_data']
+ASSESSMENT_WITH_DATA_TOGGLE=//label[@for='only_with_data']
+VIEW_ASSESSMENT_TABLE_TITLE_HEADER=//table//th[.='Title']
+FIRST_ROW_CURRENT_DATA_GREEN=//tr[1]//td[8]//a[1]//span[@class='badge badge-success']
+FIRST_ROW_CURRENT_DATA_GREY=//tr[1]//td[8]//a[1]//span[@class='badge']
+FIRST_ROW=//table[starts-with(@id,'assessment_list_data_table')]//tbody//tr
+TYPE_TITLE=//table//th[.='Type']
+OWNER_TITLE=//table//th[.='Owner']
+LAST_ACCESSED_TITLE=//table//th[.='Last Accessed']
+CURRENT_DATA_TITLE=//table//th[.='Current Data']
+VIEW_ASSESSMENTS_GREY_DATA_CIRCLE=//div[@class='assess-count']/div[.='0']
+CHECK_TABLE_EMPTY_ROWCOUNT=//table[starts-with(@id,'assessment_list_data_table')]/tbody/tr
+CHECK_HORIZONTAL_LINE_WHEN_TOGGLE_OFF=//tr[1]//td[8]/hr
+TABLE_LIST=//table[starts-with(@id,'assessment_list_data_table')]//tbody//tr
+USER_FAVORITE_FLEXIBLE=(//div[starts-with(@class,'flex')])[1]/span[2]//*[name()='svg']
+
+ADD_FILTER=//span[text()='+ Add/Edit Filters')]
+LOCAL_IDENTIFIER_FOR_FIRST_LINK=//table[starts-with(@id,'assessment_list_data_table')]//tr[1]/td[4]
+TYPE_ITEMBANK=//span[contains(text(),'Type: Item Bank')]
+TYPE_ASSESSMENT=//span[contains(text(),'Type: Assessment')]
+TYPE_SUMMARY_ASSESSMENT=//span[contains(text(),'Type: Summary Assessment')]
+TYPE_ASSESSMENT_VIEW=//span[contains(text(),'Type: Assessment View')]
+TYPE_SKILLS_ASSESSMENT=//span[contains(text(),'Type: Skills Assessments')]
+TYPE_POOL_ASSESSMENT=//span[contains(text(),'Type: Pool Assessment')]
+TYPE_STATE_AND_NATIONAL_PUBLISHER=//span[contains(text(),'Type: State & National Publisher Assessment')]
+TYPE_PFT=//span[contains(text(),'Type: Physical Fitness Test')]

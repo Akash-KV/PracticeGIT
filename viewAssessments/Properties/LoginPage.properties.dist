@@ -1,0 +1,13 @@
+#LoginPage
+VIEW_ASSESSMENT= //a[contains(text(),'View Assessments')]
+ASSESSMENT_VIEW= //div[@class='navigation-group']//li[6]
+ITEMBANK_ASSESSMENT= //a[contains(text(),'Create Itembank Assessment')]
+TITLE_INPUTFIELD= //input[@id='title']
+DESCRIPTION_INPUTFIELD= //textarea[@id='description']
+CHOOSEASSESSMENT_BUTTON= //a[@id='add_assessment']
+SAVE_BUTTON= //input[@id='save']
+ASSESSMENT_NAV= //div[@id='navigation-sidebar-content-menu-container']/ul/li[1]
+QUICK_MODE= //div[@class='modal-body']//input[@value='assessment-quick']
+NEXT_BUTTON= //button[@class='btn btn-primary']
+CREATE_BUTTON= //*[@id="saveNewQuickAssessment"]
+STANDARD_DOCUMENT= //select[@id='standard_document']
