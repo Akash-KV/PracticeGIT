@@ -10,15 +10,8 @@ import java.util.Properties;
 /*Page Object Model Class for AssessmentsNavbar */
 public class AssessmentsNavbar {
     private String viewAssessment, clickAssessment;
-    private String flexAssessment;
-    private String createAssessment;
-    private String summaryAssessment;
     private String assessmentView;
-    private String plainTextAssessment;
-    private String surveyAssessment;
     private String itembankAssessment;
-    private String visitItembank;
-    private String performanceBand;
     String dir = null;
     Properties properties = new Properties();
     InputStream input = null;
@@ -59,15 +52,4 @@ public class AssessmentsNavbar {
         return clickAssessment;
     }
 
-    //XPath
-    public String getAssessmentView() {
-        assessmentView = properties.getProperty("ASSESSMENT_VIEW");
-        return assessmentView;
-    }
-
-    //XPath
-    public String getItembankAssessment() {
-        itembankAssessment = properties.getProperty("ITEMBANK_ASSESSMENT");
-        return itembankAssessment;
-    }
 }

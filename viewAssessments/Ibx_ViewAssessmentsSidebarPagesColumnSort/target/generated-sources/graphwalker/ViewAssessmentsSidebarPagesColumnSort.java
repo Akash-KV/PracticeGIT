@@ -9,33 +9,12 @@ public interface ViewAssessmentsSidebarPagesColumnSort {
     @Vertex()
     void v_VerifyViewAssessmentsSidebarPagesColumnSort();
 
-    @Vertex()
-    void v_Dashboard();
-
-    @Edge()
-    void e_ClickNavbar();
-
     @Edge()
     void e_ViewAssessments();
 
-    @Edge()
-    void e_StartBrowser();
-
-    @Edge()
-    void e_EnterBaseURL();
-
-    @Vertex()
-    void v_BaseURL();
-
-    @Vertex()
-    void v_Navbar();
-
-    @Edge()
-    void e_DirectLogin();
-
-    @Vertex()
-    void v_BrowserStarted();
-
     @Vertex()
     void v_ViewAssessments();
+
+    @Vertex()
+    void v_ViewAssessmentsPage();
 }

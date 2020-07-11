@@ -1,13 +1,17 @@
 package Helpers;
 
+import Utils.Config;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.PrintWriter;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 import static Helpers.JavascriptHelper.highlight;
@@ -31,10 +35,20 @@ public class DriverHelper {
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).click();
     }
 
+    public static void waitFluentByXPath(WebDriver driver, final String xPath) {
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(Config.getWaitTime()))
+                .pollingEvery(Duration.ofMillis(5000)).ignoring(Exception.class);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
+    }
+
     public static void clickId(String id, WebDriverWait waiter, WebDriver driver) {
         logger(driver);
         highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(id))));
         waiter.until(ExpectedConditions.elementToBeClickable(By.id(id))).click();
+    }
+
+    public static void waitUntilLoaderInvisible() {
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']//div[.='Loading']")));
     }
 
     public static void sendKeysXpath(String xpath, String text, WebDriverWait waiter, WebDriver driver) {

@@ -10,8 +10,7 @@ import java.util.Properties;
 /*Page Object Model Class for Dashboard */
 public class Dashboard {
     private String assessmentsNav, illuminateLogo;
-    private String navAsessment;
-    private String controlPanel;
+    private String viewAssessmentsLink, viewAssessmentsHeader;
     String dir = null;
     Properties properties = new Properties();
     InputStream input = null;
@@ -49,14 +48,18 @@ public class Dashboard {
     }
 
     //XPath
-    public String getControlPanel() {
-        controlPanel = properties.getProperty("CONTROL_PANEL");
-        return controlPanel;
-    }
-
-    //XPath
     public String getIlluminateLogo() {
         illuminateLogo = properties.getProperty("ILLUMINATE_LOGO");
         return illuminateLogo;
+    }
+
+    public String getViewAssessmentsHeader() {
+        viewAssessmentsHeader = properties.getProperty("VIEW_ASSESSMENTS_HEADER");
+        return viewAssessmentsHeader;
+    }
+
+    public String getViewAssessmentsLink() {
+        viewAssessmentsLink = properties.getProperty("VIEW_ASSESSMENTS_LINK");
+        return viewAssessmentsLink;
     }
 }

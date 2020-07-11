@@ -1,18 +1,18 @@
 package Helpers;
 
+import Utils.Config;
 import Utils.ConsoleLogger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.PrintWriter;
@@ -33,7 +33,11 @@ public class DriverHelper {
     /**
      * Driver and Waiter MethodsclickXpath
      */
-
+    public static void waitFluentByXPath(WebDriver driver, final String xPath) {
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(Config.getWaitTime()))
+                .pollingEvery(Duration.ofMillis(5000)).ignoring(Exception.class);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
+    }
     public static void clickXpath(String xpath) {
         logger(BrowserInitHelper.getInstance());
         highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))));

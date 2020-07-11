@@ -12,27 +12,12 @@ public interface Ibx_ListAssessments_LocalIdentifier {
     @Vertex()
     void v_VerifyManualHybridLocalIdentifier();
 
-    @Vertex()
-    void v_VerifyLoginPage();
-
-    @Vertex()
-    void v_VerifyViewAssessments();
-
-    @Edge()
-    void e_NavigateToViewAssessments();
-
-    @Edge()
-    void e_EnterBaseUrl();
-
     @Edge()
     void e_SelectManualHybridType();
 
     @Edge()
     void e_SelectFlexibleType();
 
-    @Edge()
-    void e_DirectLogin();
-
     @Vertex()
-    void v_VerifyDashboard();
+    void v_ViewAssessmentsPage();
 }

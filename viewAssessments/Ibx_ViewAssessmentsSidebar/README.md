@@ -53,8 +53,8 @@ mvn graphwalker:test
 │       │       │     ├── ConsoleLogger.java
 │       │       │     └── DataReader.java
 │       │       │   
-│       │       ├──ViewAssessmentsSidebarSelectionTest.java
-│       │   	└──ViewAssessmentsSidebarTest.java
+│       │       ├──ViewAssessmentsSidebarTest.java
+│       │   	└──ViewAssessmentsSidebarTestHii.java
 │       │
 │       └── resources
 │			 ├── ViewAssessmentsSidebar.csv  
@@ -93,7 +93,7 @@ mvn graphwalker:test
 │	 │			├── ViewAssessmentsSidebarSelection.class
 │	 │			├── ViewAssessmentsSidebarSelection.graphml
 │	 │			├── ViewAssessmentsSidebar.graphml
-│    │          └── ViewAssessmentsSidebarSelectionTest.class
+│    │          └── ViewAssessmentsSidebarTest.class
 │	 │   
 │    │	   
 │    │     

@@ -11,8 +11,8 @@ import java.util.Properties;
  * Page Object Model Class for ViewAssessments Page
  **/
 public class ViewAssessmentsPage {
-    private String clearAllInViewAssessments, searchTextBox, searchTextBoxButton;
-    private String firstLinkAfterSearch, localidentifierforfirstlink;
+    private String clearAllInViewAssessments, searchTextBox, searchTextBoxButton, clearAllFilters;
+    private String firstLinkAfterSearch, viewAssessmentPageHeader, viewAssessmentSearchtextbox, localidentifierforfirstlink, showAssessmentsWithoutDataToggleButton;
 
 
     String dir = null;
@@ -51,8 +51,8 @@ public class ViewAssessmentsPage {
 
     //id
     public String getViewAssessmentSearchtextbox() {
-        searchTextBox = "search_string";
-        return searchTextBox;
+        viewAssessmentSearchtextbox = "search_string";
+        return viewAssessmentSearchtextbox;
     }
 
     //id
@@ -75,5 +75,25 @@ public class ViewAssessmentsPage {
     public String getClearAllInViewAssessments() {
         clearAllInViewAssessments = properties.getProperty("CLEAR_ALL_IN_VIEW_ASSESSMENTS");
         return clearAllInViewAssessments;
+    }
+
+    public String getShowAssessmentsWithoutDataToggleButton() {
+        showAssessmentsWithoutDataToggleButton = properties.getProperty("SHOW_ASSESSMENTS_WITHOUT_DATATOGGLE_BUTTON");
+        return showAssessmentsWithoutDataToggleButton;
+    }
+
+    public String getClearAllFilters() {
+        clearAllFilters = properties.getProperty("CLEAR_ALL_IN_VIEW_ASSESSMENTS");
+        return clearAllFilters;
+    }
+
+    public String getViewAssessmentSearchTextBox() {
+        searchTextBox = "search_string";
+        return searchTextBox;
+    }
+
+    public String getViewAssessmentPageHeader() {
+        viewAssessmentPageHeader = properties.getProperty("VIEWASSESSMENTS_PAGE_HEADER");
+        return viewAssessmentPageHeader;
     }
 }

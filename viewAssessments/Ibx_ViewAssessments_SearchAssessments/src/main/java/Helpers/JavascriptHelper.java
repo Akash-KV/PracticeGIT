@@ -24,6 +24,14 @@ public class JavascriptHelper {
         js.executeScript("arguments[0].setAttribute('style', 'background: white; border: 1px solid black;');", element);
     }
 
+    public static String getToggleButtonState(String ID) {
+        return (((JavascriptExecutor) BrowserInitHelper.getInstance()).executeScript("return document.getElementById('" + ID + "').checked;")).toString();
+    }
+
+    public static void ClickByID_Javascript(String ID) {
+        ((JavascriptExecutor) BrowserInitHelper.getInstance()).executeScript("return document.getElementById('" + ID + "').click();");
+    }
+
     //waitUntilAjaxLoaded Method
     public static void waitUntilAjaxLoaded() {
         while (true) {

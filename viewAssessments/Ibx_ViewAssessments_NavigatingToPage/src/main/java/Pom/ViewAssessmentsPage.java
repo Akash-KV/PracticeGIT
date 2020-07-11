@@ -6,8 +6,8 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class ViewAssessmentsPage {
-    private String createButton, popup;
-    private String createButtonDropdownAssessmentView;
+    private String popup, viewAssessmentPageHeader,showAssessmentsWithoutDataToggleButton, searchTextBox, searchTextBoxButton, clearAllFilters;
+
     String dir = null;
     Properties properties = new Properties();
     InputStream input = null;
@@ -38,20 +38,35 @@ public class ViewAssessmentsPage {
         }
     }
 
-
-    public String getCreateButton() {
-        createButton = properties.getProperty("CREATE_BUTTON");
-        return createButton;
-    }
-
-    public String getCreateButtonDropdownAssessmentView() {
-        createButtonDropdownAssessmentView = properties.getProperty("CREATE_BUTTON_DROPDOWN_ASSESSMENTS_VIEW");
-        return createButtonDropdownAssessmentView;
-    }
-
     public String getPopup() {
         popup = properties.getProperty("POPUP");
         return popup;
+    }
+
+    public String getShowAssessmentsWithoutDataToggleButton() {
+        showAssessmentsWithoutDataToggleButton = properties.getProperty("SHOW_ASSESSMENTS_WITHOUT_DATATOGGLE_BUTTON");
+        return showAssessmentsWithoutDataToggleButton;
+    }
+
+    public String getViewAssessmentSearchTextBox() {
+        searchTextBox = "search_string";
+        return searchTextBox;
+    }
+
+    //id
+    public String getViewAssessmentSearchtextboxButton() {
+        searchTextBoxButton = "direct_search";
+        return searchTextBoxButton;
+    }
+
+    public String getClearAllFilters() {
+        clearAllFilters = properties.getProperty("CLEAR_ALL_IN_VIEW_ASSESSMENTS");
+        return clearAllFilters;
+    }
+
+    public String getViewAssessmentPageHeader() {
+        viewAssessmentPageHeader = properties.getProperty("VIEWASSESSMENTS_PAGE_HEADER");
+        return viewAssessmentPageHeader;
     }
 
 }

@@ -2,19 +2,20 @@ package Controllers;
 
 import Helpers.BrowserInitHelper;
 import Helpers.DriverHelper;
+import Helpers.JavascriptHelper;
+import Pom.Dashboard;
 import Pom.ResultsPage;
-import Pom.ViewAssessments;
+import Pom.ViewAssessmentsPage;
 import Utils.ConsoleLogger;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 import static Helpers.JavascriptHelper.*;
 import static Helpers.JavascriptHelper.waitUntilAjaxLoaded;
@@ -24,26 +25,29 @@ import org.slf4j.LoggerFactory;
 
 /**** Test Class for ViewAssessmentsController *****/
 public class ViewAssessmentsController {
-    String firstLink, firstID, secondLink;
-    DriverHelper Helper = new DriverHelper();
-    ViewAssessments viewassessmentspage = new ViewAssessments();
-    ResultsPage resultsPage = new ResultsPage();
-    ViewAssessments viewAssessmentsPage = new ViewAssessments();
 
+    DriverHelper Helper = new DriverHelper();
+    ViewAssessmentsPage viewassessmentspage = new ViewAssessmentsPage();
+    ResultsPage resultsPage = new ResultsPage();
+    ViewAssessmentsPage viewAssessmentsPage = new ViewAssessmentsPage();
+    Dashboard dashboard = new Dashboard();
     /**
      * LoggerFactory
      */
     private static final Logger log = LoggerFactory.getLogger(BrowserInitHelper.class);
 
-    public static void login(String un, String pw) {
-        // logger(BrowserInitHelper.getInstance());
-        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("username"))));
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("username"))).clear();
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("username"))).sendKeys(un);
-        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("password"))));
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("password"))).clear();
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("password"))).sendKeys(pw);
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("button_next"))).click();
+
+    public void navigateToViewAssessments() {
+        DriverHelper.clickXpath(dashboard.getAssessmentsNav());
+        DriverHelper.clickXpath(dashboard.getViewAssessmentsLink());
+
+    }
+
+    // To validate Viewassessments page
+    public void verifyViewAssessments() {
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(dashboard.getViewAssessmentsHeader())));
+        boolean header = DriverHelper.checkElementDisplayByXpath(dashboard.getViewAssessmentsHeader(), "ViewAssessment");
+        Assert.assertTrue(header);
     }
 
     //Click Search Button
@@ -355,4 +359,36 @@ public class ViewAssessmentsController {
             System.out.println("Exception handled for alert popup.......");
         }
     }
+
+    // To turn off toggle button
+    public void turnOFFToggleButton() {
+        if (JavascriptHelper.getToggleButtonState(viewAssessmentsPage.getShowAssessmentsWithoutDataToggleButton()).equalsIgnoreCase("true")) {
+            /*Click Show Assessments Without Data toggle button*/
+            JavascriptHelper.ClickByID_Javascript(viewAssessmentsPage.getShowAssessmentsWithoutDataToggleButton());
+            DriverHelper.waitFluentByXPath(BrowserInitHelper.getInstance(), viewAssessmentsPage.getViewAssessmentPageHeader());
+        }
+    }
+
+    // To clear added filter
+    public void clearAddedFilter() {
+        try {
+            BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getClearAllFilters())))).click();
+            waitUntilAjaxLoaded();
+        } catch (Exception e) {
+            System.out.println("Exception handled for clear all link...");
+        }
+    }
+
+    // To clear search text box
+    public void clearSearchTextBox() {
+        try {
+            BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(viewAssessmentsPage.getViewAssessmentSearchTextBox()))).clear();
+            BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(viewAssessmentsPage.getViewAssessmentSearchtextboxButton()))).click();
+            DriverHelper.waitFluentByXPath(BrowserInitHelper.getInstance(), viewAssessmentsPage.getViewAssessmentPageHeader());
+
+        } catch (Exception e) {
+            System.out.println("Exception handled for clearing search text box");
+        }
+    }
+
 }

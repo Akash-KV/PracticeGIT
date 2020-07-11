@@ -20,14 +20,15 @@ public class LoginController {
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("button_next"))).click();
     }
 
-    //Login when AUTH ON
+    //When AuthX is ON
     public static void loginAuthXSite(String un, String pw) {
+        // logger(BrowserInitHelper.getInstance());
         highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='username']"))));
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='username']"))).clear();
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='username']"))).sendKeys(un);
         highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))));
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))).clear();
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))).sendKeys(pw);
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space(text())='Sign In']"))).click();
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//button[.='Sign In']"))).click();
     }
 }

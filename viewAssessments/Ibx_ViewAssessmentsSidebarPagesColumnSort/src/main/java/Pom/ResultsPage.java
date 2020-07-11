@@ -52,5 +52,4 @@ public class ResultsPage {
         districtFavorite = properties.getProperty("DISTRICT_FAVORITE");
         return districtFavorite;
     }
-
 }

@@ -56,7 +56,7 @@ public class CreateNewAssessmentViewTest extends ExecutionContext implements Cre
     @AfterExecution
     public void cleanup() {
         if (BrowserInitHelper.getInstance() != null) {
-          //  BrowserInitHelper.tearDown();
+            BrowserInitHelper.tearDown();
         }
     }
 

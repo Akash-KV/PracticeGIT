@@ -7,25 +7,7 @@ import org.graphwalker.java.annotation.Edge;
 public interface SearchAssessment {
 
     @Vertex()
-    void v_Dashboard();
-
-    @Edge()
-    void e_ClickNavbar();
-
-    @Edge()
-    void e_StartBrowser();
-
-    @Vertex()
-    void v_BaseURL();
-
-    @Edge()
-    void e_Assessments();
-
-    @Edge()
-    void e_DirectLogin();
-
-    @Vertex()
-    void v_BrowserStarted();
+    void v_ViewAssessmentPage();
 
     @Vertex()
     void v_VerifySearchedAssessment();
@@ -37,13 +19,10 @@ public interface SearchAssessment {
     void v_AssessmentsPanel();
 
     @Edge()
-    void e_EnterBaseURL();
-
-    @Vertex()
-    void v_Navbar();
+    void e_AssessmentPanel_ViewAssessmentOption();
 
     @Edge()
-    void e_AssessmentPanel_ViewAssessmentOption();
+    void e_Assessments();
 
     @Vertex()
     void v_ViewAssessmentsPage();

@@ -8,7 +8,7 @@
     <groupId>org.graphwalker.example</groupId>
     <version>3.4.2</version>
 
-    <name>ViewAssessmentsSidebarPagesColumnSortTest</name>
+    <name>LoginPageTest</name>
 
     <dependencies>
         <dependency>

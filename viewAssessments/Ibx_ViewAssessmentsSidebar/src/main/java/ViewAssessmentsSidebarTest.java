@@ -1,126 +1,120 @@
-import Controllers.LoginController;
+import Controllers.SidebarController;
 import Controllers.ViewAssessmentsController;
-import Helpers.BrowserInitHelper;
-import Pom.AssessmentsNavbar;
-import Pom.Dashboard;
-import Pom.ViewAssessments;
-import Utils.Config;
 import org.graphwalker.core.machine.ExecutionContext;
-import org.graphwalker.java.annotation.AfterExecution;
-import org.graphwalker.java.annotation.BeforeExecution;
 import org.graphwalker.java.annotation.GraphWalker;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import Helpers.DriverHelper;
 
-import static Helpers.JavascriptHelper.waitUntilAjaxLoaded;
-
-@GraphWalker(value = "quick_random(edge_coverage(100))", start = "e_StartBrowser")
-//Test Class for ViewAssessmentsSidebarTest
+@GraphWalker(value = "quick_random(edge_coverage(100))")
+//Test Class for ViewAssessmentsSidebarSelectionTest
 public class ViewAssessmentsSidebarTest extends ExecutionContext implements ViewAssessmentsSidebar {
 
-    //Declarations
-    Config config = new Config();
-    String browser, url, username, password, closeBrowser, multiSite, ticket, chrome, firefox, authX;
-    Boolean headless;
-    int waitTime;
-    DriverHelper Helper = new DriverHelper();
-    Dashboard dashboard = new Dashboard();
-    AssessmentsNavbar assessmentsNavbar = new AssessmentsNavbar();
-    ViewAssessments viewAssessmentsPage = new ViewAssessments();
-    ViewAssessmentsController controller = new ViewAssessmentsController();
+    SidebarController sidebarController = new SidebarController();
+    ViewAssessmentsController viewAssessmentsController = new ViewAssessmentsController();
 
-    //Logger and WebDrivers
-    private static final Logger logger = LoggerFactory.getLogger(ViewAssessmentsSidebarTest.class);
+    public void v_ViewAssessmentsPage() {
 
-    @BeforeExecution
-    public void setup() {
-        //Utils.Config
-        config.readProperties();
-        browser = config.getBrowser();
-        waitTime = config.getWaitTime();
-        url = config.getURL();
-        username = config.getUsername();
-        password = config.getPassword();
-        closeBrowser = config.getCloseBrowser();
-        multiSite = config.getMultiSite();
-        ticket = config.getTicket();
-        headless = config.getHeadless();
-        chrome = config.getChrome();
-        authX = config.getAuthX();
-        BrowserInitHelper.setup();
+        sidebarController.verifyViewAssessmentsPage();
     }
 
-    @AfterExecution
-    //For closing the browser
-    public void cleanup() {
-        if (BrowserInitHelper.getInstance() != null) {
-       //     BrowserInitHelper.tearDown();
-        }
+    public void e_ClickAllAssessments() {
+        //Click All Assessments Link
+        sidebarController.clickAllAssessments();
     }
 
-    public void e_StartBrowser() {
-
+    public void v_AllAssessments() {
+        //Verify Assessment Created by logged in User AND Other users
+        //First Search Assessment created by logged in user
+        sidebarController.verifyAllAssessments();
     }
 
-    public void v_BrowserStarted() {
-        Assert.assertNotNull(BrowserInitHelper.getInstance());
-    }
-    //entering the URL
-    public void e_EnterBaseURL() {
-        BrowserInitHelper.getInstance().get(url);
-    }
-
-    public void v_BaseURL() {
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.titleContains("Illuminate Education"));
-        BrowserInitHelper.getInstance().manage().window().maximize();
-    }
-
-    public void e_DirectLogin() {
-        //When AuthX is ON
-        if (authX.contains("ON")) {
-            LoginController.loginAuthXSite(username, password);
-        } else {
-            //When AuthX is OFF
-            LoginController.login(username, password);
-        }
+    public void e_ClickMyAssessments() {
+        //Click My Assessments Link
+        sidebarController.clickMyAssessments();
     }
 
 
-    public void v_Dashboard() {
-
+    public void v_MyAssessments() {
+        sidebarController.verfyMyAssessments();
     }
 
-    public void e_ClickNavbar() {
-    DriverHelper.waitTill(5);
-            controller.checkPopup();
-            Helper.clickXpath(dashboard.getAssessmentsNav());
-
+    public void e_ClickCreatedByMe() {
+        //Click Created By Me Link
+        sidebarController.clickCreatedByMe();
     }
 
-    public void v_Navbar() {
-
+    public void v_CreatedByMe() {
+        sidebarController.validateCreatedByMe();
     }
 
-    public void e_ViewAssessments() {
-        Helper.clickXpath(assessmentsNavbar.getViewAssessment());
-        controller.checkPopup();
-        waitUntilAjaxLoaded();
+    public void e_ClickFavorites() {
+        //Click Favorites Link
+        sidebarController.clickOnFavorites();
     }
 
-    public void v_ViewAssessments() {
-        String headerText = Helper.getText(viewAssessmentsPage.getViewAssessmentsHeader());
-        Assert.assertEquals("View Assessments", headerText);
+    public void v_Favorites() {
+        sidebarController.validateFavorites();
     }
 
-    public void v_VerifyViewAssessmentsSidebar() {
-        //DriverHelper.clickXpath(viewAssessmentsPage.getClearAllInViewAssessments());
-        WebElement viewAssessmentsFilters = BrowserInitHelper.getInstance().findElement(By.xpath(viewAssessmentsPage.getViewAssessmentsFilters()));
-        Assert.assertEquals(true, viewAssessmentsFilters.isDisplayed());
-        logger.info("View Assessments Filters is displayed.......");
+    public void e_ClickUnpublishedItemBank() {
+        //Click Favorites Link
+        sidebarController.clickUnPublishedItemBank();
+    }
+
+    public void v_UnpublishedItemBank() {
+        sidebarController.verifyUnPublishedItemBank();
+    }
+
+    public void e_ClickTrash() {
+    }
+
+    public void v_Trash() {
+        sidebarController.validateTrash();
+    }
+
+    public void e_AddMyFavorite() {
+        //Search Flexible assessment and click My Favorite
+        //Click all assessments
+        sidebarController.addMyFavorite();
+    }
+
+    public void v_CheckMyFavorite() {
+        //Search in all assessments to Verify assessment name
+        //Click on Favorites
+        sidebarController.checkMyFavorite();
+        //Assert.assertTrue(checkUnFlagFavorite);
+    }
+
+
+    public void e_AddDistrictFavorite() {
+        //Search Flexible assessment and click My Favorite
+        //Click all assessments
+        sidebarController.addDistrictFavorite();
+    }
+
+    public void v_CheckDistrictFavorite() {
+        sidebarController.validateDistrictFavorite();
+    }
+
+    public void e_Publish() {
+        //<< On hold , Step 6(Publish) not showing in QA Site for unpublished item bank assessments >>
+    }
+
+    public void v_CheckUnpublishedItemBankAssessments() {
+        //<< On hold , Step 6(Publish) not showing in QA Site for unpublished item bank assessments >>
+    }
+
+    public void e_ChangeAuthor() {
+        //Commented due to change author works only once because once author is changed, again assessment will not be visible for next test run
+        sidebarController.changeAuthor();
+    }
+
+    public void v_CheckCreatedByMeAssessments() {
+        //Commented due to change author works only once because once author is changed, again assessment will not be visible for next test run
+
+        sidebarController.checkCreatedByMeAssessments();
+
+        // To clear added filters ,search text box and toggle button
+        viewAssessmentsController.clearAddedFilter();
+        viewAssessmentsController.clearSearchTextBox();
+        viewAssessmentsController.turnOFFToggleButton();
     }
 }

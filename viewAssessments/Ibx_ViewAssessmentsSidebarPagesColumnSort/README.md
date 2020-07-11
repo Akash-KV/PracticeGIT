@@ -57,11 +57,11 @@ mvn graphwalker:test
 │       │       │   └── DataReader.java
 │       │       │   
 │       │       ├──ViewAssessmentsSidebarPagesColumnSortSelectionTest.java
-│       │   	└──ViewAssessmentsSidebarPagesColumnSortTest.java
+│       │   	└──LoginPageTest.java
 │       │
 │       └── resources
 │			 ├── CSVDataReaderViewAssessmentsColumnSort.csv  
-│            ├── ViewAssessmentsSidebarPagesColumnSortTest.graphml
+│            ├── LoginPageTest.graphml
 │            └──ViewAssessmentsSidebarPagesColumnSortSelectionTest.graphml   
 │
 │
@@ -99,7 +99,7 @@ mvn graphwalker:test
  	 │			├── ViewAssessmentsSidebarPagesColumnSortSelection.class
  	 │			├── ViewAssessmentsSidebarPagesColumnSortSelectionTest.graphml
  	 │			├── ViewAssessmentsSidebarPagesColumnSortSelectionTest.class
-     │          └── ViewAssessmentsSidebarPagesColumnSortTest.class
+     │          └── LoginPageTest.class
  	 │   
      │	   
      │     

@@ -1,10 +1,15 @@
 package Helpers;
 
+import Utils.Config;
 import Utils.ConsoleLogger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.io.PrintWriter;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 import static Helpers.JavascriptHelper.highlight;
@@ -32,6 +37,12 @@ public class DriverHelper {
         System.out.println("xpath Clicked.....-->" + xpath);
     }
 
+    public static void waitFluentByXPath(WebDriver driver, final String xPath) {
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(Config.getWaitTime()))
+                .pollingEvery(Duration.ofMillis(5000)).ignoring(Exception.class);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
+    }
+
     public static void clickId(String id) {
         logger(BrowserInitHelper.getInstance());
         highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(id))));
@@ -52,6 +63,9 @@ public class DriverHelper {
         BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(id))).sendKeys(text);
     }
 
+    public static void waitUntilLoaderInvisible() {
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='loading-overlay']//div[.='Loading']")));
+    }
 
     public static String getText(String xpath) {
         String text = BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(xpath))).getText();

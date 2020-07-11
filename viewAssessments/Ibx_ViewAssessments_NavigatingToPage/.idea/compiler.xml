@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Ibx_ViewAssessments_NavigatingToPage" target="1.5" />
+      <module name="Ibx_ViewAssessments_NavigatingToPage" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

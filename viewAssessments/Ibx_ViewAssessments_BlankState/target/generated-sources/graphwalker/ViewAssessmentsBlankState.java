@@ -9,36 +9,15 @@ public interface ViewAssessmentsBlankState {
     @Edge()
     void e_ClickShowAssessmentsWithoutDataToggleButton();
 
-    @Edge()
-    void e_EnterCredentials();
-
-    @Vertex()
-    void v_Dashboard();
-
-    @Vertex()
-    void v_VerifyViewAssessments();
-
     @Vertex()
     void v_VerifyFilters();
 
     @Vertex()
     void v_VerifyShowAssessmentsWithoutDataToggleButton();
 
-    @Edge()
-    void e_StartBrowser();
-
     @Vertex()
     void v_VerifySearchBar();
 
-    @Edge()
-    void e_EnterBaseURL();
-
     @Vertex()
-    void v_BaseURL();
-
-    @Vertex()
-    void v_BrowserStarted();
-
-    @Edge()
-    void e_ClickViewAssessmentsTile();
+    void v_ViewAssessmentsPage();
 }

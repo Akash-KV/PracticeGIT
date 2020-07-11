@@ -6,36 +6,66 @@ import org.graphwalker.java.annotation.Edge;
 @Model(file = "ViewAssessmentsSidebar.graphml")
 public interface ViewAssessmentsSidebar {
 
-    @Vertex()
-    void v_Dashboard();
+    @Edge()
+    void e_ClickAllAssessments();
 
     @Edge()
-    void e_ClickNavbar();
+    void e_AddMyFavorite();
+
+    @Vertex()
+    void v_CheckUnpublishedItemBankAssessments();
 
     @Edge()
-    void e_ViewAssessments();
+    void e_ClickUnpublishedItemBank();
 
     @Edge()
-    void e_StartBrowser();
+    void e_ClickCreatedByMe();
 
     @Vertex()
-    void v_VerifyViewAssessmentsSidebar();
+    void v_CreatedByMe();
 
     @Edge()
-    void e_EnterBaseURL();
+    void e_ClickTrash();
 
     @Vertex()
-    void v_BaseURL();
+    void v_MyAssessments();
 
     @Vertex()
-    void v_Navbar();
+    void v_CheckCreatedByMeAssessments();
 
     @Edge()
-    void e_DirectLogin();
+    void e_Publish();
 
     @Vertex()
-    void v_BrowserStarted();
+    void v_AllAssessments();
+
+    @Edge()
+    void e_ChangeAuthor();
 
     @Vertex()
-    void v_ViewAssessments();
+    void v_Favorites();
+
+    @Vertex()
+    void v_CheckDistrictFavorite();
+
+    @Vertex()
+    void v_CheckMyFavorite();
+
+    @Edge()
+    void e_ClickFavorites();
+
+    @Edge()
+    void e_AddDistrictFavorite();
+
+    @Vertex()
+    void v_UnpublishedItemBank();
+
+    @Edge()
+    void e_ClickMyAssessments();
+
+    @Vertex()
+    void v_ViewAssessmentsPage();
+
+    @Vertex()
+    void v_Trash();
 }

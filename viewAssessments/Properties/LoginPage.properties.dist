@@ -11,3 +11,15 @@ QUICK_MODE= //div[@class='modal-body']//input[@value='assessment-quick']
 NEXT_BUTTON= //button[@class='btn btn-primary']
 CREATE_BUTTON= //*[@id="saveNewQuickAssessment"]
 STANDARD_DOCUMENT= //select[@id='standard_document']
+
+
+#LoginPage
+
+#ID
+LOGINPAGE_USERNAME_AUTHX_OFF=username
+LOGINPAGE_PASSWORD_AUTHX_OFF=password
+LOGINPAGE_SIGNIN_AUTHX_OFF=button_next
+
+LOGINPAGE_USERNAME_AUTHX_ON=//input[@name='username']
+LOGINPAGE_PASSWORD_AUTHX_ON=//input[@name='password']
+LOGINPAGE_SIGNIN_AUTHX_ON=//span[normalize-space(text())='Sign In']

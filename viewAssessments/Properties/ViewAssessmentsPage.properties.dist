@@ -195,3 +195,5 @@ TYPE_SKILLS_ASSESSMENT=//span[contains(text(),'Type: Skills Assessments')]
 TYPE_POOL_ASSESSMENT=//span[contains(text(),'Type: Pool Assessment')]
 TYPE_STATE_AND_NATIONAL_PUBLISHER=//span[contains(text(),'Type: State & National Publisher Assessment')]
 TYPE_PFT=//span[contains(text(),'Type: Physical Fitness Test')]
+
+VIEWASSESSMENTS_PAGE_HEADER=//span[.='View Assessments']

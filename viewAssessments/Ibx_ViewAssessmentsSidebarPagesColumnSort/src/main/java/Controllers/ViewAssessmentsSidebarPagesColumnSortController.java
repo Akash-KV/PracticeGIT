@@ -4,7 +4,7 @@ import Helpers.BrowserInitHelper;
 import Helpers.DriverHelper;
 import Helpers.JSExecutorHelper;
 import Pom.ResultsPage;
-import Pom.ViewAssessments;
+import Pom.ViewAssessmentsPage;
 import Utils.Config;
 import Utils.ConsoleLogger;
 import org.junit.Assert;
@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
 public class ViewAssessmentsSidebarPagesColumnSortController {
 
     DriverHelper Helper = new DriverHelper();
-    ViewAssessments viewassessmentspage = new ViewAssessments();
+    ViewAssessmentsPage viewassessmentspage = new ViewAssessmentsPage();
     ResultsPage resultsPage = new ResultsPage();
 
     /**

@@ -47,6 +47,14 @@ public class JavascriptHelper {
         }
     }
 
+    public static String getToggleButtonState(String ID) {
+        return (((JavascriptExecutor) BrowserInitHelper.getInstance()).executeScript("return document.getElementById('" + ID + "').checked;")).toString();
+    }
+
+    public static void ClickByID_Javascript(String ID) {
+        ((JavascriptExecutor) BrowserInitHelper.getInstance()).executeScript("return document.getElementById('" + ID + "').click();");
+    }
+
     public static void clickID_JS(String ID) {
         ((JavascriptExecutor) BrowserInitHelper.getInstance()).executeScript("return !!jQuery(\"#" + ID + "\").click();");
     }

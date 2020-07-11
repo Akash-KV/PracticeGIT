@@ -7,8 +7,7 @@ import java.util.Properties;
 
 // Page Object Model class for ViewAssessments Page
 public class ViewAssessmentsPage {
-    private String createButton, popup;
-    private String createButtonDropdownAssessmentView;
+    private String popup, clearAllFilters, searchTextBox,searchTextBoxButton,viewAssessmentPageHeader;
     private String addFilters, searchAssessmentsBar, showAssessmentsWithoutDataToggleButton;
 
 
@@ -45,16 +44,6 @@ public class ViewAssessmentsPage {
      * Methods to read locators from Property file
      **/
 
-    public String getCreateButton() {
-        createButton = properties.getProperty("CREATE_BUTTON");
-        return createButton;
-    }
-
-    public String getCreateButtonDropdownAssessmentView() {
-        createButtonDropdownAssessmentView = properties.getProperty("CREATE_BUTTON_DROPDOWN_ASSESSMENTS_VIEW");
-        return createButtonDropdownAssessmentView;
-    }
-
     public String getAddFilters() {
         addFilters = properties.getProperty("ADD_FILTERS");
         return addFilters;
@@ -75,4 +64,24 @@ public class ViewAssessmentsPage {
         return popup;
     }
 
+    public String getClearAllFilters() {
+        clearAllFilters = properties.getProperty("CLEAR_ALL_IN_VIEW_ASSESSMENTS");
+        return clearAllFilters;
+    }
+
+    public String getViewAssessmentSearchTextBox() {
+        searchTextBox = "search_string";
+        return searchTextBox;
+    }
+
+    //id
+    public String getViewAssessmentSearchtextboxButton() {
+        searchTextBoxButton = "direct_search";
+        return searchTextBoxButton;
+    }
+
+    public String getViewAssessmentPageHeader() {
+        viewAssessmentPageHeader = properties.getProperty("VIEWASSESSMENTS_PAGE_HEADER");
+        return viewAssessmentPageHeader;
+    }
 }

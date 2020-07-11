@@ -7,9 +7,8 @@ import java.util.Properties;
 
 //Page object model class for ViewAssessments Page
 public class ViewAssessmentsPage {
-    private String createButton, popup;
-    private String createButtonDropdownAssessmentView, searchTextBox, searchTextBoxButton, loader, pagingInfo, firstRowTypeColumn, firstRowTypeForFlexible;
-    private String unpublishedIteBank, unpublishedIteBankPageHeader, nodataAvailableinTable;
+    private String popup, searchTextBox, viewAssessmentSearchtextbox, searchTextBoxButton, loader, pagingInfo, firstRowTypeColumn, clearAllFilters;
+    private String unpublishedIteBank, viewAssessmentPageHeader, unpublishedIteBankPageHeader, nodataAvailableinTable, showAssessmentsWithoutDataToggleButton;
     String dir = null;
     Properties properties = new Properties();
     InputStream input = null;
@@ -40,23 +39,14 @@ public class ViewAssessmentsPage {
         }
     }
 
-    /*
-    Methods to read the locators from property file
-    */
-    public String getCreateButton() {
-        createButton = properties.getProperty("CREATE_BUTTON");
-        return createButton;
-    }
-
-    public String getCreateButtonDropdownAssessmentView() {
-        createButtonDropdownAssessmentView = properties.getProperty("CREATE_BUTTON_DROPDOWN_ASSESSMENTS_VIEW");
-        return createButtonDropdownAssessmentView;
-    }
+    /**
+     * Methods to read the locators from property file
+     **/
 
     //id
     public String getViewAssessmentSearchtextbox() {
-        searchTextBox = "search_string";
-        return searchTextBox;
+        viewAssessmentSearchtextbox = "search_string";
+        return viewAssessmentSearchtextbox;
     }
 
     //id
@@ -81,11 +71,6 @@ public class ViewAssessmentsPage {
         return firstRowTypeColumn;
     }
 
-    public String getFirstRowTypeForFlexible() {
-        firstRowTypeForFlexible = properties.getProperty("FIRST_ROW_TYPE_FOR_FLEXIBLE");
-        return firstRowTypeForFlexible;
-    }
-
     public String getUnpublishedItemBank() {
         unpublishedIteBank = properties.getProperty("UNPUBLISHED_ITEM_BANK");
         return unpublishedIteBank;
@@ -106,4 +91,23 @@ public class ViewAssessmentsPage {
         return popup;
     }
 
+    public String getShowAssessmentsWithoutDataToggleButton() {
+        showAssessmentsWithoutDataToggleButton = properties.getProperty("SHOW_ASSESSMENTS_WITHOUT_DATATOGGLE_BUTTON");
+        return showAssessmentsWithoutDataToggleButton;
+    }
+
+    public String getClearAllFilters() {
+        clearAllFilters = properties.getProperty("CLEAR_ALL_IN_VIEW_ASSESSMENTS");
+        return clearAllFilters;
+    }
+
+    public String getViewAssessmentSearchTextBox() {
+        searchTextBox = "search_string";
+        return searchTextBox;
+    }
+
+    public String getViewAssessmentPageHeader() {
+        viewAssessmentPageHeader = properties.getProperty("VIEWASSESSMENTS_PAGE_HEADER");
+        return viewAssessmentPageHeader;
+    }
 }

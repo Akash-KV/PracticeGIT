@@ -53,7 +53,7 @@ mvn graphwalker:test
 │       │   │    └── DataReader.java
 │       │   │     
 │       │   │     
-│       │   └── Ibx_ListAssessments_LocalIdentifierTest.java
+│       │   └── LoginPageTest.java
 │       │
 │       └── resources
 │           ├── Assessments.csv
@@ -94,7 +94,7 @@ mvn graphwalker:test
 	│   ├── Assessments.class 
 	│   ├── Ibx_ListAssessments_LocalIdentifier.class
 	│   ├── Ibx_ListAssessments_LocalIdentifier.graphml
-	│   └──	Ibx_ListAssessments_LocalIdentifierTest.class
+	│   └──	LoginPageTest.class
     │               
     │           
     ├── generated-sources

@@ -1,44 +1,47 @@
 package Controllers;
-
 import Helpers.BrowserInitHelper;
+import Pom.LoginPage;
+import Utils.ConsoleLogger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
+import static Helpers.LoggerHelper.logger;
 import static Helpers.JavascriptHelper.highlight;
-//Test Class for-Login Controller
-
-/**** Login Controller *****/
+//Controller class for login controller
 public class LoginController {
-    //When AuthX is ON
+    //Method to login
+    public static LoginPage loginPage = new LoginPage();
     public static void login(String un, String pw) {
+        logger(BrowserInitHelper.getInstance());
+        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getUsernameAuthxOff()))));
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getUsernameAuthxOff()))).clear();
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getUsernameAuthxOff()))).sendKeys(un);
+        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getPasswordAuthxOff()))));
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getPasswordAuthxOff()))).clear();
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getPasswordAuthxOff()))).sendKeys(pw);
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id(loginPage.getSignInAuthxOff()))).click();
+    }
+    //When AuthX is ON
+    public static void loginAuthXSite(String un, String pw) {
         // logger(BrowserInitHelper.getInstance());
-        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("username"))));
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("username"))).clear();
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("username"))).sendKeys(un);
-        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("password"))));
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("password"))).clear();
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("password"))).sendKeys(pw);
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.id("button_next"))).click();
+        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getUsernameAuthxOn()))));
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getUsernameAuthxOn()))).clear();
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getUsernameAuthxOn()))).sendKeys(un);
+        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getPasswordAuthxOn()))));
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getPasswordAuthxOn()))).clear();
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getPasswordAuthxOn()))).sendKeys(pw);
+        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath(loginPage.getSignInAuthxOn()))).click();
     }
 
-    //When AuthX is OFF
-//    public static void loginAuthXSite(String un, String pw) {
-//        // logger(BrowserInitHelper.getInstance());
-//        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.name("username"))));
-//        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.name("username"))).clear();
-//        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.name("username"))).sendKeys(un);
-//        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.name("password"))));
-//        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.name("password"))).clear();
-//        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.name("password"))).sendKeys(pw);
-//        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//button[.='Sign In']"))).click();
-//    }
-    public static void loginAuthXSite(String un, String pw) {
-        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='username']"))));
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='username']"))).clear();
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='username']"))).sendKeys(un);
-        highlight(BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))));
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))).clear();
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='password']"))).sendKeys(pw);
-        BrowserInitHelper.getWaiter().until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space(text())='Sign In']"))).click();
+    // To Validate LoginPage
+    public void verifyLoginPage() {
+        String title = BrowserInitHelper.getInstance().getTitle();
+        if (title.equalsIgnoreCase("Illuminate Education")) {
+            Assert.assertTrue(true);
+            ConsoleLogger.SuccessLog("loginPage is displayed");
+        } else {
+            ConsoleLogger.FailedTestCase("LoginPage is not displayed");
+            Assert.assertTrue(false);
+        }
     }
 }

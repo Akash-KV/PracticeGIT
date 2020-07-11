@@ -41,7 +41,7 @@ mvn graphwalker:test
 │       │   │    ├── AssessmentsViewPage.java
 │       │   │    └── Dashboard.java
 │       │   │    ├──ItembankAssessment.java
-│       │   │    ├── LoginPage.java
+│       │   │    ├── LoginPageTest.java
 │       │   │    └── ViewAssessmentsPage.java 
 │       │   │    
 │       │   │  
@@ -52,7 +52,7 @@ mvn graphwalker:test
 │       │   │    ├── ConsoleLogger.java
 │       │   │    └── DataReader.java
 │       │   │    └── DataReaderViewAssessmentsSearch.java
-│       │   └── SearchAssessmentTest.java
+│       │   └── LoginPageTest.java
 │       │   
 │       │
 │       └── resources
@@ -78,7 +78,7 @@ mvn graphwalker:test
     │   │     ├── AssessmentsViewPage.class
     │   │     └── Dashboard.class
 	│   │     │── ItembankAssessment.class
-    │   │     ├──LoginPage.class
+    │   │     ├──LoginPageTest.class
     │   │     └── ViewAssessmentsPage.class
 	│   │
 	│   │
@@ -91,7 +91,7 @@ mvn graphwalker:test
 	│   ├── SearchAssessment.class 
     │   ├── SearchAssessment.graphml    
     │   ├── ViewAssessmentsSearch.csv     
-    │   └── SearchAssessmentTest.class    
+    │   └── LoginPageTest.class    
     │          
     │           
     ├── generated-sources

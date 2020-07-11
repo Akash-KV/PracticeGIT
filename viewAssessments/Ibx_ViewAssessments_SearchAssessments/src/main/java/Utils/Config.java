@@ -54,7 +54,7 @@ public class Config {
             headless = properties.getProperty("HEADLESS");
             chrome = properties.getProperty("CHROME");
             firefox = properties.getProperty("FIREFOX");
-            authX = properties.getProperty("AUTHX");
+            authX = properties.getProperty("AUTHX_ENABLED");
         } catch (IOException ex) {
             ex.printStackTrace();
         } finally {

@@ -5,16 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-//Page Object Model Class for Login Page
 public class LoginPage {
-    private String username, password;
-    private String loginUsername, loginPassword, loginSignInButton;
-
-
     String dir = null;
     Properties properties = new Properties();
     InputStream input = null;
     private static String os = null;
+
+    private String usernameAuthxOff, passwordAuthxOff, signInAuthxOff;
+    private String usernameAuthxOn, passwordAuthxOn, signInAuthxOn;
 
     public LoginPage() {
         try {
@@ -44,18 +42,34 @@ public class LoginPage {
      * Methods to read locators from Property file
      **/
 
-    public String getloginUsername() {
-        loginUsername = properties.getProperty("LOGIN_USERNAME");
-        return loginUsername;
+
+    public String getUsernameAuthxOff() {
+        usernameAuthxOff = properties.getProperty("LOGINPAGE_USERNAME_AUTHX_OFF");
+        return usernameAuthxOff;
     }
 
-    public String getloginPassword() {
-        loginPassword = properties.getProperty("LOGIN_PASSWORD");
-        return loginPassword;
+    public String getPasswordAuthxOff() {
+        passwordAuthxOff = properties.getProperty("LOGINPAGE_PASSWORD_AUTHX_OFF");
+        return passwordAuthxOff;
     }
 
-    public String getloginSignInButton() {
-        loginSignInButton = properties.getProperty("LOGIN_SIGNIN");
-        return loginSignInButton;
+    public String getSignInAuthxOff() {
+        signInAuthxOff = properties.getProperty("LOGINPAGE_SIGNIN_AUTHX_OFF");
+        return signInAuthxOff;
+    }
+
+    public String getUsernameAuthxOn() {
+        usernameAuthxOn = properties.getProperty("LOGINPAGE_USERNAME_AUTHX_ON");
+        return usernameAuthxOn;
+    }
+
+    public String getPasswordAuthxOn() {
+        passwordAuthxOn = properties.getProperty("LOGINPAGE_PASSWORD_AUTHX_ON");
+        return passwordAuthxOn;
+    }
+
+    public String getSignInAuthxOn() {
+        signInAuthxOn = properties.getProperty("LOGINPAGE_SIGNIN_AUTHX_ON");
+        return signInAuthxOn;
     }
 }
