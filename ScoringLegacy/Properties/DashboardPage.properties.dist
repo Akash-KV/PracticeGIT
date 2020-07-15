@@ -1,0 +1,7 @@
+SIDEBAR_ASSESSMENTS_LINK= //div[@id='navigation-sidebar-content-menu-container']//span[text() = 'Assessments']
+ILLUMINATE_LOGO= //div[@id = 'navigation-sidebar-content']//div[@class = 'ie-icon logo-icon']
+ASSESSMENTS_MODAL= //h1[text() = 'Assessments']
+CREATE_ASSESSMENT_LINK= //li[@class='navigation-link']//a[text() = 'Create Assessment']
+CREATE_FLEXIBLE_ASSESSMENT_ICON= //div[@class = 'create-assessment-info']/h4[text() = 'Flexible']
+CREATE_ITEMBANK_ASSESSMENT_ICON=//div[@class = 'create-assessment-info']/h4[text() = 'Item Bank']
+DASHBOARD_TILETITLEELEMENT=//ul[@id = 'tile-holder']/li//div[@class = 'tile-title']

@@ -1,0 +1,7 @@
+LOGIN_USERNAME=//input[@id='username']
+LOGIN_PASSWORD=//input[@id='password']
+LOGIN_SIGNINBUTTON=//button[@id = 'button_next']
+LOGIN_ILLUMINATELOGO_FOR_DEMO=//a/img[contains(@class,'illuminate-logo ied-login-logo')]
+LOGIN_ILLUMINATELOGO_FOR_IBXON=//div[contains(@class,'d-flex image-container')]//a/img[contains(@class,'ie-logo')]
+LOGIN_GOOGLE_EMAIL=//input[@type='email']
+LOGIN_GOOGLE_PASSWORD=//input[@type='password']
