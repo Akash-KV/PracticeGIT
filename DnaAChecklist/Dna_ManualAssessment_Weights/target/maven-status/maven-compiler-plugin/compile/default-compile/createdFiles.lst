@@ -1,0 +1,12 @@
+org\graphwalker\PageObjectModels\CreateAssessmentModal.class
+Utils\Helper.class
+org\graphwalker\CreateManualAssessment.class
+org\graphwalker\Config.class
+org\graphwalker\PageObjectModels\ManualAssessmentOverviewPage.class
+org\graphwalker\TestData.class
+org\graphwalker\PageObjectModels\Dashboard.class
+org\graphwalker\PageObjectModels\OnlineTestingAdministrationPage.class
+Utils\DataUtils.class
+org\graphwalker\PageObjectModels\ManualAssessmentPage.class
+org\graphwalker\PageObjectModels\AssessmentsNavbar.class
+org\graphwalker\CreateManualAssessmentTest.class
