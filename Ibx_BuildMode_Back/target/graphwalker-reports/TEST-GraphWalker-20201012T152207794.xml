@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites time="0.219" tests="3" failures="2" errors="1">
+    <testsuite tests="3" failures="2" errors="1" time="0.219" timestamp="2020-10-12T15:22:07">
+        <properties>
+            <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+            <property name="classworlds.conf" value="D:/QA/apache-maven-3.6.3-bin/apache-maven-3.6.3/bin/m2.conf"/>
+            <property name="env.=::" value="::\"/>
+            <property name="env.ACLOCAL_PATH" value="C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal"/>
+            <property name="env.ALLUSERSPROFILE" value="C:\ProgramData"/>
+            <property name="env.APPDATA" value="C:\Users\lenovo\AppData\Roaming"/>
+            <property name="env.COMMONPROGRAMFILES" value="C:\Program Files\Common Files"/>
+            <property name="env.COMMONPROGRAMFILES(X86)" value="C:\Program Files (x86)\Common Files"/>
+            <property name="env.COMMONPROGRAMW6432" value="C:\Program Files\Common Files"/>
+            <property name="env.COMPUTERNAME" value="LENOVO-PC"/>
+            <property name="env.COMSPEC" value="C:\Windows\system32\cmd.exe"/>
+            <property name="env.CONFIG_SITE" value="C:/Program Files/Git/mingw64/etc/config.site"/>
+            <property name="env.DISPLAY" value="needs-to-be-defined"/>
+            <property name="env.EXEPATH" value="C:\Program Files\Git"/>
+            <property name="env.FP_NO_HOST_CHECK" value="NO"/>
+            <property name="env.HOME" value="C:\Users\lenovo"/>
+            <property name="env.HOMEDRIVE" value="C:"/>
+            <property name="env.HOMEPATH" value="\Users\lenovo"/>
+            <property name="env.HOSTNAME" value="lenovo-PC"/>
+            <property name="env.INFOPATH" value="C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info"/>
+            <property name="env.JAVA_HOME" value="C:/Program Files/Java/jdk1.8.0_241"/>
+            <property name="env.LANG" value="en_US.UTF-8"/>
+            <property name="env.LOCALAPPDATA" value="C:\Users\lenovo\AppData\Local"/>
+            <property name="env.LOGONSERVER" value="\\LENOVO-PC"/>
+            <property name="env.MANPATH" value="C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man"/>
+            <property name="env.MAVEN_CMD_LINE_ARGS" value=" graphwalker:test"/>
+            <property name="env.MAVEN_HOME" value="D:/QA/apache-maven-3.6.3-bin/apache-maven-3.6.3"/>
+            <property name="env.MAVEN_PROJECTBASEDIR" value="D:/Git/qa-automation/model-based-testing/mbt-ie/Model_Repository/Dna_ItembankX_Suite/Ibx_BuildMode_Back"/>
+            <property name="env.MINGW_CHOST" value="x86_64-w64-mingw32"/>
+            <property name="env.MINGW_PACKAGE_PREFIX" value="mingw-w64-x86_64"/>
+            <property name="env.MINGW_PREFIX" value="C:/Program Files/Git/mingw64"/>
+            <property name="env.MSYSTEM" value="MINGW64"/>
+            <property name="env.MSYSTEM_CARCH" value="x86_64"/>
+            <property name="env.MSYSTEM_CHOST" value="x86_64-w64-mingw32"/>
+            <property name="env.MSYSTEM_PREFIX" value="C:/Program Files/Git/mingw64"/>
+            <property name="env.NUMBER_OF_PROCESSORS" value="4"/>
+            <property name="env.OLDPWD" value="D:/Git/qa-automation/model-based-testing/mbt-ie/Model_Repository/Dna_ItembankX_Suite/Ibx_BuildMode_Back"/>
+            <property name="env.ORIGINAL_PATH" value="C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lenovo\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jre1.8.0_241\bin;C:\Program Files\Java\jdk1.8.0_241\bin;D:\QA\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Program Files\SourceGear\Common\DiffMerge"/>
+            <property name="env.ORIGINAL_TEMP" value="C:/Users/lenovo/AppData/Local/Temp"/>
+            <property name="env.ORIGINAL_TMP" value="C:/Users/lenovo/AppData/Local/Temp"/>
+            <property name="env.OS" value="Windows_NT"/>
+            <property name="env.PATH" value="C:\Users\lenovo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lenovo\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jre1.8.0_241\bin;C:\Program Files\Java\jdk1.8.0_241\bin;D:\QA\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Program Files\SourceGear\Common\DiffMerge;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl"/>
+            <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+            <property name="env.PKG_CONFIG_PATH" value="C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig"/>
+            <property name="env.PLINK_PROTOCOL" value="ssh"/>
+            <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64"/>
+            <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 42 Stepping 7, GenuineIntel"/>
+            <property name="env.PROCESSOR_LEVEL" value="6"/>
+            <property name="env.PROCESSOR_REVISION" value="2a07"/>
+            <property name="env.PROGRAMDATA" value="C:\ProgramData"/>
+            <property name="env.PROGRAMFILES" value="C:\Program Files"/>
+            <property name="env.PROGRAMFILES(X86)" value="C:\Program Files (x86)"/>
+            <property name="env.PROGRAMW6432" value="C:\Program Files"/>
+            <property name="env.PSMODULEPATH" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
+            <property name="env.PUBLIC" value="C:\Users\Public"/>
+            <property name="env.PWD" value="D:/Git/qa-automation/model-based-testing/mbt-ie/Model_Repository/Dna_ItembankX_Suite/Ibx_BuildMode_Back"/>
+            <property name="env.SESSIONNAME" value="Console"/>
+            <property name="env.SHELL" value="C:\Program Files\Git\usr\bin\bash.exe"/>
+            <property name="env.SHLVL" value="1"/>
+            <property name="env.SSH_ASKPASS" value="C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass"/>
+            <property name="env.SYSTEMDRIVE" value="C:"/>
+            <property name="env.SYSTEMROOT" value="C:\Windows"/>
+            <property name="env.TEMP" value="C:\Users\lenovo\AppData\Local\Temp"/>
+            <property name="env.TERM" value="xterm"/>
+            <property name="env.TMP" value="C:\Users\lenovo\AppData\Local\Temp"/>
+            <property name="env.TMPDIR" value="C:\Users\lenovo\AppData\Local\Temp"/>
+            <property name="env.USERDOMAIN" value="lenovo-PC"/>
+            <property name="env.USERNAME" value="lenovo"/>
+            <property name="env.USERPROFILE" value="C:\Users\lenovo"/>
+            <property name="env.WINDIR" value="C:\Windows"/>
+            <property name="env.WINDOWS_TRACING_FLAGS" value="3"/>
+            <property name="env.WINDOWS_TRACING_LOGFILE" value="C:\BVTBin\Tests\installpackage\csilogfile.log"/>
+            <property name="file.encoding" value="Cp1252"/>
+            <property name="file.encoding.pkg" value="sun.io"/>
+            <property name="file.separator" value="\"/>
+            <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+            <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+            <property name="java.class.path" value="D:/QA/apache-maven-3.6.3-bin/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
+            <property name="java.class.version" value="52.0"/>
+            <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\endorsed"/>
+            <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+            <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_241\jre"/>
+            <property name="java.io.tmpdir" value="C:\Users\lenovo\AppData\Local\Temp\"/>
+            <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_241\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\lenovo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lenovo\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Program Files\Java\jre1.8.0_241\bin;C:\Program Files\Java\jdk1.8.0_241\bin;D:\QA\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;C:\Program Files\SourceGear\Common\DiffMerge;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+            <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+            <property name="java.runtime.version" value="1.8.0_241-b07"/>
+            <property name="java.specification.name" value="Java Platform API Specification"/>
+            <property name="java.specification.vendor" value="Oracle Corporation"/>
+            <property name="java.specification.version" value="1.8"/>
+            <property name="java.vendor" value="Oracle Corporation"/>
+            <property name="java.vendor.url" value="http://java.oracle.com/"/>
+            <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+            <property name="java.version" value="1.8.0_241"/>
+            <property name="java.vm.info" value="mixed mode"/>
+            <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+            <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+            <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+            <property name="java.vm.specification.version" value="1.8"/>
+            <property name="java.vm.vendor" value="Oracle Corporation"/>
+            <property name="java.vm.version" value="25.241-b07"/>
+            <property name="library.jansi.path" value="D:/QA/apache-maven-3.6.3-bin/apache-maven-3.6.3/lib/jansi-native"/>
+            <property name="line.separator" value="&#xD;&#xA;"/>
+            <property name="maven.build.version" value="Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)"/>
+            <property name="maven.conf" value="D:/QA/apache-maven-3.6.3-bin/apache-maven-3.6.3/conf"/>
+            <property name="maven.home" value="D:\QA\apache-maven-3.6.3-bin\apache-maven-3.6.3"/>
+            <property name="maven.multiModuleProjectDirectory" value="D:/Git/qa-automation/model-based-testing/mbt-ie/Model_Repository/Dna_ItembankX_Suite/Ibx_BuildMode_Back"/>
+            <property name="maven.version" value="3.6.3"/>
+            <property name="os.arch" value="amd64"/>
+            <property name="os.name" value="Windows 7"/>
+            <property name="os.version" value="6.1"/>
+            <property name="path.separator" value=";"/>
+            <property name="sun.arch.data.model" value="64"/>
+            <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_241\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_241\jre\classes"/>
+            <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
+            <property name="sun.cpu.endian" value="little"/>
+            <property name="sun.cpu.isalist" value="amd64"/>
+            <property name="sun.desktop" value="windows"/>
+            <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+            <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher graphwalker:test"/>
+            <property name="sun.java.launcher" value="SUN_STANDARD"/>
+            <property name="sun.jnu.encoding" value="Cp1252"/>
+            <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+            <property name="sun.os.patch.level" value="Service Pack 1"/>
+            <property name="user.country" value="US"/>
+            <property name="user.dir" value="D:\Git\qa-automation\model-based-testing\mbt-ie\Model_Repository\Dna_ItembankX_Suite\Ibx_BuildMode_Back"/>
+            <property name="user.home" value="C:\Users\lenovo"/>
+            <property name="user.language" value="en"/>
+            <property name="user.name" value="lenovo"/>
+            <property name="user.script" value=""/>
+            <property name="user.timezone" value=""/>
+            <property name="user.variant" value=""/>
+        </properties>
+        <testcase name="UserSwitchModelTest" time="0.073" classname="UserSwitchModelTest">
+            <failure type="Not fulfilled" message="0"/>
+        </testcase>
+        <testcase name="LoginPageTest" time="0.073" classname="LoginPageTest">
+            <error type="java.lang.NullPointerException">
+                java.lang.NullPointerException&#xD;
+                	at Helpers.BrowserInitHelper.getInstance(BrowserInitHelper.java:165)&#xD;
+                	at LoginPageTest.v_BrowserStarted(LoginPageTest.java:60)&#xD;
+                	at jdk.nashorn.internal.scripts.Script$Recompilation$13$232$\^eval\_.v_BrowserStarted(&lt;eval&gt;:1)&#xD;
+                	at jdk.nashorn.internal.scripts.Script$12$\^eval\_.:program(&lt;eval&gt;:1)&#xD;
+                	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:637)&#xD;
+                	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)&#xD;
+                	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)&#xD;
+                	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:449)&#xD;
+                	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:406)&#xD;
+                	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:402)&#xD;
+                	at jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:155)&#xD;
+                	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)&#xD;
+                	at org.graphwalker.core.machine.ExecutionContext.execute(ExecutionContext.java:300)&#xD;
+                	at org.graphwalker.core.machine.SimpleMachine.execute(SimpleMachine.java:290)&#xD;
+                	at org.graphwalker.core.machine.SimpleMachine.execute(SimpleMachine.java:265)&#xD;
+                	at org.graphwalker.core.machine.SimpleMachine.getNextStep(SimpleMachine.java:105)&#xD;
+                	at org.graphwalker.java.test.TestExecutor.execute(TestExecutor.java:199)&#xD;
+                	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xD;
+                	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xD;
+                	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xD;
+                	at java.lang.reflect.Method.invoke(Method.java:498)&#xD;
+                	at org.graphwalker.java.test.Reflections.invoke(Reflections.java:74)&#xD;
+                	at org.graphwalker.java.test.Reflector.execute(Reflector.java:125)&#xD;
+                	at org.graphwalker.maven.plugin.TestMojo.execute(TestMojo.java:153)&#xD;
+                	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)&#xD;
+                	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)&#xD;
+                	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)&#xD;
+                	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)&#xD;
+                	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)&#xD;
+                	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)&#xD;
+                	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)&#xD;
+                	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)&#xD;
+                	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)&#xD;
+                	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)&#xD;
+                	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)&#xD;
+                	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)&#xD;
+                	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)&#xD;
+                	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)&#xD;
+                	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xD;
+                	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#xD;
+                	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xD;
+                	at java.lang.reflect.Method.invoke(Method.java:498)&#xD;
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)&#xD;
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)&#xD;
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)&#xD;
+                	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)&#xD;
+</error>
+        </testcase>
+        <testcase name="BuildModeBackButtonTest" time="0.073" classname="BuildModeBackButtonTest">
+            <failure type="Not fulfilled" message="0"/>
+        </testcase>
+    </testsuite>
+</testsuites>
